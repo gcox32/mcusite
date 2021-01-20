@@ -1,11 +1,31 @@
 {% load static %}
-<!doctype html>
-<html>
 
-    <br>
-    {% for movie in movie_id %}
-        <button type="button" onclick= "test">{{ movie.title }}</button>
-        <br>
-    {% endfor %}
-    
-</html>
+<link rel="stylesheet" type="text/css" href="{% static 'MCU/style.css' %}">
+<script src="{% static 'MCU/script.js' %}"></script>
+
+<div class="timeline-container" id="timeline-1">
+    <div class="timeline-header">
+      <h2 class="timeline-header__title">The Marvel Cinematic Universe</h2>
+      <h3 class="timeline-header__subtitle">Timeline</h3>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" data-text="MARVEL CINEMATIC UNIVERSE">
+        <div class="timeline__content"><img class="timeline__img" src="https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg"/>
+          <h2 class="timeline__content-title">The First Avenger</h2>
+          <p class="timeline__content-desc">I don't want to kill anybody. I don't like a bully.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-text="MARVEL CINEMATIC UNIVERSE">
+        <div class="timeline__content"><img class="timeline__img" src="https://images.immediate.co.uk/production/volatile/sites/3/2018/05/IRON-2008-d7a2706.jpg?webp=true&quality=90&resize=620%2C413"/>
+          <h2 class="timeline__content-title">I Am Iron Man</h2>
+          <p class="timeline__content-desc">I want a cheeseburger.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-text="MARVEL CINEMATIC UNIVERSE">
+        <div class="timeline__content"><img class="timeline__img" src="https://astronlogia.com/wp-content/uploads/2018/03/Pagan-Gods.webp"/>
+          <h2 class="timeline__content-title">God of Thunder</h2>
+          <p class="timeline__content-desc">We should've done better for you, Natalie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
