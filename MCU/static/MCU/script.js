@@ -2,10 +2,11 @@
     $.fn.timeline = function() {
       var selectors = {
         id: $(this),
-        item: $(this).find("timeline-item"),
+        item: $(this).find(".timeline-item"),
         activeClass: "timeline-item--active",
-        img: "timeline__img"
+        img: ".timeline__img"
       };
+
       selectors.item.eq(0).addClass(selectors.activeClass);
       selectors.id.css(
         "background-image",
@@ -16,8 +17,10 @@
             .attr("src") +
           ")"
       );
+
       var itemLength = selectors.item.length;
       $(window).scroll(function() {
+        // debugger;
         var max, min;
         var pos = $(this).scrollTop();
         selectors.item.each(function(i) {
@@ -36,7 +39,9 @@
                 ")"
             );
             selectors.item.last().addClass(selectors.activeClass);
-          } else if (pos <= max - 40 && pos >= min) {
+
+          } 
+          else if (pos <= max - 40 && pos >= min) {
             selectors.id.css(
               "background-image",
               "url(" +
@@ -53,5 +58,8 @@
     };
   })(jQuery);
   
-  $("timeline-1").timeline();
-  
+$("#timeline-1").timeline();
+
+// $('.timeline__img').click(function() { 
+//     alert('test');
+// });(jQuery);

@@ -20,4 +20,5 @@ from MCU import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name = 'index'),
+    path('series/', views.series, name = 'series')
 ]

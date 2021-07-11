@@ -13,3 +13,9 @@ def index(request):
         'movie_id': data,
     }
     return render(request, 'MCU/index.html', mov)
+
+def series(request):
+    return render(request, 'MCU/series.html')
+
+def test(request):
+    return HttpResponse('text')
